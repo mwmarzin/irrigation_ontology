@@ -1,0 +1,219 @@
+
+    <project basedir="."
+        default="build-war"
+        name="intrude">
+        <!--  Configuration properties  -->
+        <!--  ========================  -->
+        <property environment="env"/>
+        <property file="build.properties"/>
+        <property file="load.properties"/>
+        <property file="person.properties"/>
+        <!--  Source code locations  -->
+        <property name="logs.dir" value="logs"/>
+        <property name="src.dir" value="util/src"/>
+        <property name="test.dir" value="intrude-functional-tests"/>
+        <property name="data.dir" value="data"/>
+        <property name="classes.dir" value="util/classes"/>
+        <property name="war.src.dir" value="intrude-war/src/java"/>
+        <property name="war.classes.dir" value="intrude-war/src/webapp/WEB-INF/classes"/>
+        <property name="war.lib.dir" value="war-lib"/>
+        <property name="test.lib.dir" value="intrude-functional-tests/lib"/>
+        <property name="test.classes.dir" value="intrude-functional-tests/classes"/>
+        <property name="test.src.dir" value="intrude-functional-tests/src"/>
+        <property name="intrude.lib.dir" value="dist"/>
+        <!--  Classpaths  -->
+        <path id="war.classpath">
+            <fileset dir="${war.lib.dir}" includes="*.jar"/>
+            <pathelement location="${war.classes.dir}"/>
+            <pathelement location="${classes.dir}"/>
+        </path>
+        <path id="test.classpath">
+            <fileset dir="${test.lib.dir}" includes="*.jar"/>
+            <pathelement location="${test.classes.dir}"/>
+        </path>
+        <path id="classpath.tools">
+            <pathelement location="${classes.dir}"/>
+            <fileset dir="${war.lib.dir}" includes="**/*.jar"/>
+            <fileset dir="${intrude.lib.dir}" includes="**/*util*.jar"/>
+        </path>
+        <!--  Source code preparation targets  -->
+        <!--  ===============================  -->
+        <target name="clean-classes" description="Remove all contents from ${classes.dir}
+            to ensure a clean build">
+            <delete dir="${test.classes.dir}"/>
+            <delete dir="${war.classes.dir}"/>
+            <delete dir="${classes.dir}"/>
+            <delete dir="${logs.dir}"/>
+            <mkdir dir="${classes.dir}"/>
+            <mkdir dir="${test.classes.dir}"/>
+            <mkdir dir="${war.classes.dir}"/>
+        </target>
+        <!--  Primary Java build targets  -->
+        <target name="compile-util" description="Compile the copied source tree into class
+            files under ${classes.dir}" depends="runSchemaGen">
+            <delete file="dist/intrude-util.jar"/>
+            <mkdir dir="${logs.dir}"/>
+            <mkdir dir="${classes.dir}"/>
+            <javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true">
+                <classpath refid="war.classpath"/>
+            </javac>
+            <jar destfile="dist/intrude-util.jar" basedir="util/classes" excludes="**/*.properties,
+                **/*.ttl, **/*.log"/>
+        </target>
+        <target name="compile-tests" description="Compile the tests under ${test.classes.dir}"
+            depends="compile-util">
+            <mkdir dir="${logs.dir}"/>
+            <mkdir dir="${test.classes.dir}"/>
+            <javac srcdir="${test.src.dir}" destdir="${test.classes.dir}" debug="true">
+                <classpath refid="test.classpath"/>
+                <classpath refid="war.classpath"/>
+            </javac>
+        </target>
+        <target name="run-optimize" description="Optimize The Solr Index">
+            <copy todir="${classes.dir}" overwrite="true" file="load.properties"/>
+            <java classname="intrude.util.OptimizeSolr" fork="true" output="${classes.dir}/optimize.log">
+                <classpath>
+                    <path refid="war.classpath"/>
+                </classpath>
+            </java>
+        </target>
+        <target name="run-IDS" description="load the data through a web service" depends="compile-util,abox-IDS">
+            <mkdir dir="${classes.dir}"/>
+            <mkdir dir="${data.dir}"/>
+            <copy toFile="${classes.dir}/load.properties" overwrite="true" file="load.properties"/>
+            <java classname="intrude.util.LoadAboxWebService" fork="true" output="${classes.dir}/webservice.load.log">
+                <classpath>
+                    <path refid="war.classpath"/>
+                </classpath>
+                <arg value="${data.dir}/incident.nt"/>
+            </java>
+            <antcall target="run-optimize"/>
+        </target>
+        <target name="run-clear-index" description="run the clear command">
+            <exec executable="curl">
+                <arg line="${PURGE_CMD}"/>
+            </exec>
+        </target>
+        <target name="compile-war" description="Compile the copied source tree into class
+            files under ${war.classes.dir}" depends="compile-util">
+            <mkdir dir="${logs.dir}"/>
+            <delete dir="${war.classes.dir}"/>
+            <mkdir dir="${war.classes.dir}"/>
+            <javac srcdir="${war.src.dir}" destdir="${war.classes.dir}" debug="true">
+                <classpath refid="war.classpath"/>
+            </javac>
+        </target>
+        <target name="deploy" description="deploy to web server" depends="build-war">
+            <copy todir="${webapps.dir}" overwrite="true" file="dist/intrude.war"/>
+        </target>
+        <target name="run-tests" description="run the junit tests using data and results dirs"
+            depends="compile-tests">
+            <copy todir="${test.classes.dir}" overwrite="true">
+                <fileset dir="${test.dir}">
+                    <include name="load.properties"/>
+                    <include name="content.txt"/>
+                </fileset>
+            </copy>
+            <junit printsummary="yes" haltonfailure="no">
+                <formatter type="xml"/>
+                <classpath refid="test.classpath"/>
+                <classpath refid="war.classpath"/>
+                <!-- <test fork="yes" name="intrude.test.TestGEO" todir="${test.classes.dir}"/> -->
+                <test fork="yes" name="intrude.test.TestSelect" todir="${test.classes.dir}"/>
+                <!-- <test fork="yes" name="intrude.test.TestGEO" todir="${test.classes.dir}" methods="testCurrentPartialTrackPointsInfer"/>
+                    <test fork="yes" name="intrude.test.TestGEO" todir="${test.classes.dir}"
+                    methods="testRouteHistorical"/> <test fork="yes" name="intrude.test.TestGEO"
+                    todir="${test.classes.dir}" methods="testCurrentPartialTrackPointsInferWithRelevantHistory"/>
+                    -->
+                <!-- <test fork="yes" name="intrude.test.TestGEO" todir="${test.classes.dir}" methods="testTrackPoints"/>
+                    <test fork="yes" name="intrude.test.TestGEO" todir="${test.classes.dir}"
+                    methods="testRouteCurrent"/> -->
+            </junit>
+        </target>
+        <target name="system-test" description="do a system test" depends="delete-deploy,
+            deploy, wait-for-deploy, run-clear-index, run-IDS, run-tests">
+        </target>
+        <target name="wait-for-deploy" description="wait for deployment of intrude war file">
+            <sleep seconds="20"/>
+        </target>
+        <target name="delete-deploy" description="delete the deploy">
+            <delete dir="${webapps.dir}/intrude"/>
+            <delete file="${webapps.dir}/intrude.war"/>
+            <exec dir="${webapps.dir}/../bin" executable="bash" os="Linux">
+                <arg line="./shutdown.sh"/>
+            </exec>
+            <sleep seconds="5"/>
+            <exec dir="${webapps.dir}/../bin" executable="bash" os="Linux">
+                <arg line="./startup.sh "/>
+            </exec>
+        </target>
+        <target name="build-war" description="build the intrude war file" depends="compile-war">
+            <copy todir="${war.classes.dir}" overwrite="true" file="IDSrules.txt"/>
+            <copy todir="${war.classes.dir}" overwrite="true" file="load.properties"/>
+            <war destfile="dist/intrude.war" webxml="intrude-war/src/webapp/WEB-INF/web.xml">
+                <fileset dir="intrude-war/src/webapp"/>
+                <lib dir="${war.lib.dir}" excludes="servlet-api.jar"/>
+                <lib dir="dist" includes="intrude-util.jar"/>
+                <classes dir="${war.classes.dir}"/>
+            </war>
+        </target>
+        <!-- ONTOLOGY -->
+        <target name="runSchemaGen" description="Generate the ontologies">
+            <java classname="jena.schemagen">
+                <classpath>
+                    <path refid="classpath.tools"/>
+                </classpath>
+                <arg value="-i"/>
+                <arg value="IDS.owl"/>
+                <arg value="-o"/>
+                <arg value="util/src/"/>
+                <arg value="-n"/>
+                <arg value="IDS"/>
+                <arg value="--package"/>
+                <arg value="intrude.util.generated"/>
+                <arg value="--ontology"/>
+            </java>
+            <java classname="jena.schemagen">
+                <classpath>
+                    <path refid="classpath.tools"/>
+                </classpath>
+                <arg value="-i"/>
+                <arg value="Provenance.owl"/>
+                <arg value="-o"/>
+                <arg value="util/src/"/>
+                <arg value="-n"/>
+                <arg value="Provenance"/>
+                <arg value="--package"/>
+                <arg value="intrude.util.generated"/>
+                <arg value="--ontology"/>
+            </java>
+        </target>
+        <target name="abox-IDS" description="create Abox for User Preferences" depends="compileAbox">
+            <copy todir="${classes.dir}" file="IDSrules.txt"/>
+            <copy todir="${classes.dir}" file="logging.properties"/>
+            <java classname="intrude.util.abox.LoadIncidents" output="${classes.dir}/abox.incident.log">
+                <sysproperty key="java.util.logging.config.file" value="${basedir}/logging.properties"/>
+                <classpath>
+                    <path refid="classpath.tools"/>
+                </classpath>
+                <arg value="${data.dir}"/>
+                <arg value="incident"/>
+            </java>
+        </target>
+        <target name="compileAbox" description="compile Abox" depends="runSchemaGen">
+            <mkdir dir="result"/>
+            <copy todir="${classes.dir}" file="IDS.owl"/>
+            <copy todir="${classes.dir}" file="Provenance.owl"/>
+            <mkdir dir="${classes.dir}"/>
+            <javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true" optimize="${java.optimize}">
+                <classpath refid="classpath.tools"/>
+            </javac>
+        </target>
+        <target name="clean" description="Remove all contents from ${classes.dir} to ensure
+            a clean build">
+            <delete dir="${classes.dir}"/>
+            <mkdir dir="${classes.dir}"/>
+            <delete dir="result"/>
+            <mkdir dir="result"/>
+        </target>
+    </project>

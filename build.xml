@@ -1,0 +1,125 @@
+<project name="irrigation_ontology" default="abox-small" basedir=".">
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+      <classpath>
+        <pathelement location="lib/ant-libs/ant-contrib-1.0b3.jar"/>
+      </classpath>
+    </taskdef>
+    <!-- Configuration properties -->
+    <!-- ======================== -->
+    <property environment="env" />
+
+    <property file="build.properties" />
+    <!-- Source code locations -->
+    <property name="src.dir" value="src" />
+    <property name="gen.src.dir" value="src/irrigation/generated" />
+    <property name="test.dir" value="tests" />
+    <property name="data.dir" value="data" />
+    <property name="owl.dir" value="${data.dir}/owl" />
+    <property name="classes.dir" value="classes" />
+    <property name="logs.dir" value="logs" />
+    <property name="owl.dir" value="${data.dir}/owl" />
+    <property name="jena.lib.dir" value="lib/apache-jena-2.11.2/lib" />
+
+    <property name="test.lib.dir" value="tests/lib" />
+    <property name="test.classes.dir" value="tests/classes" />
+    <property name="test.src.dir" value="tests/src" />
+
+    <property name="package.name" value="irrigation"/>
+    <property name="gen.package.name" value="irrigation.generated"/>
+        
+    <property name="dist.dir" value="dist" />
+
+    <!-- Classpaths -->
+    <path id="test.classpath">
+        <fileset dir="${test.lib.dir}" includes="*.jar" />
+        <pathelement location="${test.classes.dir}" />
+    </path>
+
+    <path id="classpath.tools">
+        <pathelement location="${classes.dir}" />
+        <fileset dir="${jena.lib.dir}" includes="**/*.jar" />
+    </path>
+
+    <target name="abox-small" description="create Abox for User Preferences" depends="compileAbox">
+        <java classname="org.semantic.LoadSmall" output="${classes.dir}/abox.small.log">
+            <sysproperty key="java.util.logging.config.file" value="${logs.dir}/logging.properties" />
+
+            <classpath>
+                <path refid="classpath.tools" />
+            </classpath>
+            <arg value="result" />
+            <arg value="small" />
+        </java>
+    </target>
+
+    <target name="compileAbox" description="compile Abox">
+        <mkdir dir="result" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true" optimize="${java.optimze}">
+            <classpath refid="classpath.tools">
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="runSchemaGen" description="Generate the ontologies">
+        <foreach target="schemaGen" param="owl.file">
+            <path>
+                <fileset dir="${owl.dir}/"/>
+            </path>
+        </foreach>
+    </target>
+    
+    <target name="schemaGen" description="Run jena's schemagen for an owl file" >
+        <echo message="${owl.file}"/> 
+        <basename property="owl.file.name" file="${owl.file}" suffix=".owl"/>
+        <echo message="${owl.file.name}" />
+        <java classname="jena.schemagen">
+            <classpath>
+                <path refid="classpath.tools" />
+            </classpath>
+            <arg value="-i" />
+            <arg value="${owl.file}" />
+            <arg value="-o" />
+            <arg value="${src.dir}" />
+            <arg value="-n" />
+            <arg value="${owl.file.name}" />
+            <arg value="--package" />
+            <arg value="${gen.package.name}" />
+            <arg value="--ontology" />
+        </java>
+    </target>
+
+    <target name="clean" description="Remove all contents from ${classes.dir} to ensure a clean build">
+        <delete dir="${classes.dir}" />
+        <mkdir dir="${classes.dir}" />
+        <delete dir="result" />
+        <mkdir dir="result" />
+    </target>
+
+    <!-- TEST SECTION -->
+
+    <target name="compile-tests" description="Compile the tests under ${test.classes.dir}" depends="compileAbox">
+        <mkdir dir="${logs.dir}" />
+        <mkdir dir="${test.classes.dir}" />
+        <javac srcdir="${test.src.dir}" destdir="${test.classes.dir}" debug="true">
+            <classpath refid="test.classpath" />
+            <classpath refid="war.classpath" />
+        </javac>
+    </target>
+
+    <target name="run-tests" description="run the junit tests using data and results dirs" depends="compile-tests">
+        <copy todir="${test.classes.dir}" overwrite="true">
+            <fileset dir="${test.dir}">
+                <include name="load.properties" />
+                <include name="content.txt" />
+            </fileset>
+        </copy>
+        <junit printsummary="yes" haltonfailure="no">
+            <formatter type="xml" />
+            <classpath refid="test.classpath" />
+            <classpath refid="war.classpath" />
+            <!-- <test fork="yes" name="intrude.test.TestGEO" todir="${test.classes.dir}"/> -->
+            <test fork="yes" name="intrude.test.TestSelect" todir="${test.classes.dir}"/>
+        </junit>
+    </target>
+
+</project>
