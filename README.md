@@ -1,4 +1,4 @@
-irrigation_ontology
+Irrigation Ontology
 ===================
 
 This repository is to work on creating an irrigation ontology using Jena and Protege
