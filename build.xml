@@ -63,7 +63,7 @@
     <target name="runSchemaGen" description="Generate the ontologies">
         <foreach target="schemaGen" param="owl.file">
             <path>
-                <fileset dir="${owl.dir}/"/>
+                <fileset dir="${owl.dir}/" includes="*owl"/>
             </path>
         </foreach>
     </target>
@@ -85,6 +85,7 @@
             <arg value="--package" />
             <arg value="${gen.package.name}" />
             <arg value="--ontology" />
+            <arg value="--owl" />
         </java>
     </target>
 
