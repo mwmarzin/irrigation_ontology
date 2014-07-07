@@ -1,0 +1,3457 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ontology for vCard based on RFC6350</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Final</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ontology for vCard</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Additive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Climate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contaiminant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroundWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumidtySensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrrigationSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pesticide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantFood"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reservoirs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#River"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thermameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterEmitter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterFilter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WindSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Acquaintance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#BBS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Cell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Child"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Colleague"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Contact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Coresident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Coworker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Crush"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Dom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Email"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Emergency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Fax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Female"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Friend"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Home"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#ISDN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Individual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Internet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Intl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Male"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Me"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Met"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Modem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Msg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Muse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Neighbor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#None"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Other"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#PCS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Pager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Parcel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Parent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Postal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Pref"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Sibling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Spouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Sweetheart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Tel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Text"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TextPhone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Unknown"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#VCard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Video"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Voice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#X400"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasIrrigationSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasPatch"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IrrigationType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAWaterSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#adr"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#email"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#geo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasAdditionalName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasCalendarBusy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasCalendarLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasCalendarRequest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasCountryName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasFN"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasFamilyName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasGeo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasGivenName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasHonorificPrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasHonorificSuffix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasInstantMessage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasKey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasLocality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasLogo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasNickname"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasNote"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasOrganizationName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasOrganizationUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasPhoto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasPostalCode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasRelated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasSound"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasStreetAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasTitle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasUID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasURL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#key"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#logo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#n"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#org"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#photo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#sound"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#tel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#owner"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#patch"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#soil"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#GallonsUsedPerHour"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#IrrgationTypeName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depletion_level"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#additional-name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#anniversary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#bday"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#category"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#class"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#country-name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#extended-address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#family-name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#fn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#given-name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#label"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#latitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#locality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#mailer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#nickname"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#note"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#organization-name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#organization-unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#post-office-box"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#postal-code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#prodid"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#region"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#rev"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#role"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#sort-string"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#street-address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#tz"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#value"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#GroundWater"/>
+        <Class IRI="#Reservoirs"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Address"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#country-name"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#country-name"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#locality"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#locality"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#region"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#region"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#street-address"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#street-address"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasMember"/>
+                <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasMember"/>
+                <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#VCard"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/2006/vcard/ns#fn"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Name"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMinCardinality cardinality="0">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                </DataMinCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#family-name"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#family-name"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#given-name"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMaxCardinality cardinality="1">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#given-name"/>
+                </DataMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMinCardinality cardinality="0">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+                </DataMinCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataMinCardinality cardinality="0">
+                    <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                </DataMinCardinality>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#GroundWater"/>
+        <Class IRI="#WaterSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumidtySensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lake"/>
+        <Class IRI="#WaterSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pesticide"/>
+        <Class IRI="#Additive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantFood"/>
+        <Class IRI="#Additive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicWater"/>
+        <Class IRI="#WaterSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reservoirs"/>
+        <Class IRI="#WaterSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#River"/>
+        <Class IRI="#WaterSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thermameter"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WindSensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Acquaintance"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Agent"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#BBS"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Car"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Cell"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Child"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Colleague"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Contact"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Coresident"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Coworker"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Crush"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Date"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Dom"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Emergency"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Fax"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Female"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Gender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Friend"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Home"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#ISDN"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Internet"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Intl"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kin"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Label"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Location"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Male"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Gender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Me"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Met"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Modem"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Msg"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Muse"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Neighbor"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#None"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Gender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Other"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Gender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#PCS"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Pager"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Parcel"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Parent"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Postal"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Pref"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Sibling"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Spouse"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Sweetheart"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#RelatedType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Text"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TextPhone"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Unknown"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Gender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Video"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Voice"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Work"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#X400"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Type"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Individual"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Location"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Organization"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Location"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Organization"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Location"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Organization"/>
+    </DisjointClasses>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#adr"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#email"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#geo"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasGeo"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasKey"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#key"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasLogo"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#logo"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasName"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#n"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasPhoto"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#photo"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasSound"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#sound"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#tel"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasURL"/>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#url"/>
+    </EquivalentObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasIrrigationSystem"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasOwner"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasPatch"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasType"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IrrigationType"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#IrrgationTypeName"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAWaterSource"/>
+        <Class IRI="#IrrigationSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasMember"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasIrrigationSystem"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasOwner"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasPatch"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAWaterSource"/>
+        <Class IRI="#WaterSource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Email"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasMember"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2006/vcard/ns#hasName"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Name"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#organization-unit"/>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#organization-name"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#owner"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#patch"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#soil"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#type"/>
+        <Class IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#GallonsUsedPerHour"/>
+        <Class IRI="#IrrigationSystem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#IrrgationTypeName"/>
+        <Class IRI="#IrrigationSystem"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#owner"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#GallonsUsedPerHour"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#IrrgationTypeName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depletion_level"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#additional-name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#anniversary"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+            <Datatype abbreviatedIRI="xsd:gYear"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#bday"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+            <Datatype abbreviatedIRI="xsd:gYear"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#category"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#country-name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#family-name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#fn"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#given-name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#locality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#nickname"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#note"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#organization-name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#organization-unit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#postal-code"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#prodid"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#region"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#rev"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#role"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#sort-string"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#street-address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#tz"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Climate</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Look for external
+
+http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network#CF_.28Climate_and_Forecast.29_ontologies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Location</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Look for external</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Look for external sensor ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Acquaintance</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Acquaintance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Acquaintance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the components of the delivery address for the  object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Address</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Agent</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#BBS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#BBS</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#BBS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BBS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#BBS</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Car</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Car</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Car</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Car</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Car</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Cell</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Also called mobile telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Cell</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Cell</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Child</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Child</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Child</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Colleague</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Colleague</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Colleague</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Contact</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Contact</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Contact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Coresident</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Coresident</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Coresident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Coworker</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Coworker</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Coworker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Crush</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Crush</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Crush</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Date</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Date</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Dom</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Dom</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Dom</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Dom</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Email</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Email</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Email</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Email</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Emergency</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Emergency</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Emergency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Fax</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Fax</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Female</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Female</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Female</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Friend</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Friend</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Friend</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Gender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used for gender codes. The URI of the gender code must be used as the value for Gender.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Gender</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Gender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Gender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Group</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Group</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Group</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Home</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This implies that the property is related to an individual&apos;s personal life</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Home</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Home</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Home</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#ISDN</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#ISDN</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#ISDN</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ISDN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#ISDN</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Individual</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An object representing a single person or entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Individual</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Individual</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Individual</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Internet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Internet</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Internet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Internet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Internet</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Intl</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Intl</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Intl</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Intl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Intl</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Kin</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Kin</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Kin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Kind</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The parent class for all objects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Kind</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Kind</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Label</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Label</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Label</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Label</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Label</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Location</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An object representing a named geographical place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Location</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Location</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Male</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Male</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Male</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Me</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Me</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Me</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Met</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Met</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Met</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Modem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Modem</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Modem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Modem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Modem</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Msg</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Msg</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Msg</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Msg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Msg</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Muse</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Muse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Muse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the components of the name of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Name</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Neighbor</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Neighbor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Neighbor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#None</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#None</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">None</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Organization</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Organization</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Organization</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Other</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Other</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Other</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#PCS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#PCS</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#PCS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PCS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#PCS</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Pager</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Pager</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Pager</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Parcel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Parcel</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Parcel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Parcel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Parcel</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Parent</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Parent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Postal</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Postal</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Postal</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Postal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Postal</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Pref</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Pref</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Pref</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Pref</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Pref</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#RelatedType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#RelatedType</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#RelatedType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relation Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Sibling</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Sibling</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sibling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Spouse</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Spouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Spouse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Sweetheart</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Sweetheart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sweetheart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Tel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated. Use the hasTelephone object property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Tel</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Tel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Tel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Tel</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#TelephoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#TelephoneType</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#TelephoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Text</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Also called sms telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Text</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Text</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#TextPhone</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#TextPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Text phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Type</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used for type codes. The URI of the type code must be used as the value for Type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Type</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Type</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Unknown</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Unknown</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Unknown</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#VCard</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards (Individual, Organization, Location, Group)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#VCard</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#VCard</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">VCard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Video</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Video</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Voice</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Voice</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Voice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Work</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This implies that the property is related to an individual&apos;s work place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Work</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#Work</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#X400</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This class is deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#X400</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#X400</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">X400</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#X400</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#additional-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The additional name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#additional-name</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#additional-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">additional name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#adr</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#adr</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#adr</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#agent</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#agent</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#anniversary</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The date of marriage, or equivalent, of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#anniversary</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#anniversary</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">anniversary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#bday</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the birth date of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#bday</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#bday</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">birth date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#category</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The category information about the object, also known as tags</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#category</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#category</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#class</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#class</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#class</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#class</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#country-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The country name associated with the address of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#country-name</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#country-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">country name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#email</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#email</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#email</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#extended-address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#extended-address</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#extended-address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">extended address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#extended-address</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#family-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The family name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#family-name</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#family-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">family name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#fn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The formatted text corresponding to the name of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#fn</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#fn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">formatted name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#geo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#geo</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#geo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">geo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#given-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The given name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#given-name</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#given-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">given name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasAdditionalName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the additional name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasAdditionalName</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasAdditionalName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has additional name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the components of the delivery address for the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasAddress</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarBusy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the busy time associated with the object. (Was called FBURL in RFC6350)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarBusy</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarBusy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has calendar busy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarLink</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the calendar associated with the object. (Was called CALURI in RFC6350)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarLink</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarLink</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has calendar link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarRequest</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the calendar user address to which a scheduling request be sent for the object. (Was called CALADRURI in RFC6350)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarRequest</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCalendarRequest</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has calendar request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCategory</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the category data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCategory</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCategory</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCountryName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the country name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCountryName</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasCountryName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has country name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the electronic mail address for communication with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasEmail</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasFN</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the formatted name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasFN</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasFN</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has formatted name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasFamilyName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the family name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasFamilyName</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasFamilyName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has family name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGender</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has gender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGeo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify information related to the global positioning of the object. May also be used as a property parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGeo</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGeo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has geo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGivenName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the given name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGivenName</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasGivenName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has given name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasHonorificPrefix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the honorific prefix data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasHonorificPrefix</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasHonorificPrefix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has honorific prefix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasHonorificSuffix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the honorific suffix data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasHonorificSuffix</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasHonorificSuffix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has honorific suffix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasInstantMessage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the instant messaging and presence protocol communications with the object. (Was called IMPP in RFC6350)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasInstantMessage</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasInstantMessage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has messaging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasKey</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify a public key or authentication certificate associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasKey</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasKey</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has key</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the language data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLanguage</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLocality</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the locality data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLocality</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLocality</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has locality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLogo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify a graphic image of a logo associated with the object </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLogo</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasLogo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has logo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To include a member in the group this object represents. (This property can only be used by Group individuals)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasMember</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the components of the name of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasName</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNickname</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the nickname data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNickname</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNickname</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has nickname</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNickname</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns#nickname</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNote</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the note data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNote</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasNote</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasOrganizationName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the organization name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasOrganizationName</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasOrganizationName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has organization name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasOrganizationUnit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the organization unit name data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasOrganizationUnit</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasOrganizationUnit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has organization unit name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasPhoto</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify an image or photograph information that annotates some aspect of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasPhoto</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasPhoto</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has photo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasPostalCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the postal code data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasPostalCode</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasPostalCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has postal code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRegion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the region data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRegion</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRegion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRelated</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify a relationship between another entity and the entity represented by this object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRelated</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRelated</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has related</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRole</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the role data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRole</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasRole</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasSound</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify a digital sound content information that annotates some aspect of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasSound</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasSound</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has sound</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasSource</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To identify the source of directory information of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasSource</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasSource</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasStreetAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the street address data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasStreetAddress</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasStreetAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has street address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasTelephone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the telephone number for telephony communication with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasTelephone</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasTelephone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to support property parameters for the title data property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasTitle</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasUID</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify a value that represents a globally unique identifier corresponding to the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasUID</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasUID</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has uid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasURL</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify a uniform resource locator associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasURL</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasURL</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to indicate the resource value of an object property that requires property parameters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasValue</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#hasValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#honorific-prefix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The honorific prefix of the name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#honorific-prefix</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#honorific-prefix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">honorific prefix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#honorific-suffix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The honorific suffix of the name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#honorific-suffix</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#honorific-suffix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">honorific suffix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#key</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#key</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#key</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">key</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#label</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#label</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#label</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">label</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#label</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#language</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the language that may be used for contacting the object. May also be used as a property parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#language</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#language</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#latitude</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated. See hasGeo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#latitude</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#latitude</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#latitude</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#locality</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The locality (e.g. city or town) associated with the address of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#locality</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#locality</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">locality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#logo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#logo</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#logo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">logo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#longitude</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated. See hasGeo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#longitude</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#longitude</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#longitude</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#mailer</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#mailer</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#mailer</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">mailer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#mailer</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#n</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#n</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#n</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#nickname</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The nick name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#nickname</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#nickname</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">nickname</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#note</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A note associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#note</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#note</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">note</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#org</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped. Use the organization-name data property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#org</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#org</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#organization-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the organizational name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#organization-name</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#organization-name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">organization name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#organization-unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the organizational unit name associated with the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#organization-unit</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#organization-unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">organizational unit name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#photo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#photo</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#photo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">photo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#post-office-box</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This data property has been deprecated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#post-office-box</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#post-office-box</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">post office box</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#post-office-box</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#postal-code</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The postal code associated with the address of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#postal-code</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#postal-code</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">postal code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#prodid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the identifier for the product that created the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#prodid</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#prodid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">product id</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#region</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The region (e.g. state or province) associated with the address of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#region</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#region</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#rev</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify revision information about the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#rev</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#rev</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">revision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#role</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the function or part played in a particular situation by the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#role</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#role</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#sort-string</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the string to be used for national-language-specific sorting. Used as a property parameter only.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#sort-string</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#sort-string</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">sort as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#sound</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#sound</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#sound</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">sound</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#street-address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The street address associated with the address of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#street-address</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#street-address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">street address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#tel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#tel</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#tel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#title</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify the position or job of the object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#title</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#title</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#tz</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To indicate time zone information that is specific to the object. May also be used as a property parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#tz</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#tz</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">time zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#url</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This object property has been mapped</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#url</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#url</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#value</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Used to indicate the literal value of a data property that requires property parameters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#value</IRI>
+        <IRI>http://www.w3.org/2006/vcard/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/vcard/ns#value</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">value</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
