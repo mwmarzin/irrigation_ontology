@@ -51,6 +51,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HasClimate -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HasClimate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Location"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HasLocation -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HasLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IsIn -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IsIn">
+        <rdfs:comment>Specifies the water source where the contaminant lives</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaminant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterSource"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasAWaterSource -->
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasAWaterSource">
@@ -69,19 +93,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasContaminant -->
-
-    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasContaminant">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaiminant"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterSource"/>
-    </ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop -->
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch"/>
     </ObjectProperty>
     
@@ -92,6 +106,20 @@
     <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasIrrigationSystem">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasMaturityOf -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasMaturityOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
+        <rdfs:range>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#max_dry_weight"/>
+                <someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </Restriction>
+        </rdfs:range>
     </ObjectProperty>
     
 
@@ -155,6 +183,15 @@
     <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hsWaterSource">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterSource"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#isIn -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#isIn">
+        <rdfs:comment>This object property will link this class with the soil class</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
     </ObjectProperty>
     
 
@@ -697,10 +734,185 @@
     
 
 
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AllowableDepletion -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AllowableDepletion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvailableWater -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvailableWater">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvgPrecipitation -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvgPrecipitation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Climate"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvgRelativeHumidity -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvgRelativeHumidity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Climate"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvgWindSpeed -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#AvgWindSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Climate"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#City -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#City">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#CoordinateX -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#CoordinateX">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Location"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#CoordinateY -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#CoordinateY">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Location"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#CurrentValue -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#CurrentValue">
+        <rdfs:comment>The current reading from the sensor</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Efficiency -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Efficiency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#GallonsUsedPerHour -->
 
     <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#GallonsUsedPerHour">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HealthEffect -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HealthEffect">
+        <rdfs:comment>This attribute displays what could happen if the contaminant were to affect the user of water</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaminant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Measures -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Measures">
+        <rdfs:comment>What property of the soil is this sensor measuring?</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Root_Depth -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Root_Depth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#SaturationLevel -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#SaturationLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Source -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Source">
+        <rdfs:comment>Specifies where the contaminant could originate from</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaminant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#State -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#State">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Type -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Type">
+        <rdfs:comment>Type of contaminant</rdfs:comment>
+        <rdfs:comment>Type of sensor (model #, manufactor, etc)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaminant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterCapacity -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WiltingPoint -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WiltingPoint">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </DatatypeProperty>
     
@@ -719,6 +931,15 @@
     <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#irrgationTypeName">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#max_dry_weight -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#max_dry_weight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </DatatypeProperty>
     
 
@@ -1161,9 +1382,9 @@ http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network
     
 
 
-    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaiminant -->
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaminant -->
 
-    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaiminant"/>
+    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Contaminant"/>
     
 
 
@@ -1190,14 +1411,6 @@ http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network
     <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#GroundWater">
         <equivalentClass rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Reservoirs"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterSource"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HumidtySensor -->
-
-    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#HumidtySensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
     </Class>
     
 
@@ -1273,7 +1486,7 @@ http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor -->
 
     <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor">
-        <rdfs:comment>Look for external sensor ontology</rdfs:comment>
+        <rdfs:comment>Sensor located within the soil to measure different properties about the farm land</rdfs:comment>
     </Class>
     
 
@@ -1281,14 +1494,6 @@ http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil -->
 
     <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Thermameter -->
-
-    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Thermameter">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
-    </Class>
     
 
 
@@ -1307,14 +1512,6 @@ http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterSource -->
 
     <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WaterSource"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WindSensor -->
-
-    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#WindSensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
-    </Class>
     
 
 
