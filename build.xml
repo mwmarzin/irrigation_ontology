@@ -18,6 +18,7 @@
     <property name="classes.dir" value="classes" />
     <property name="logs.dir" value="logs" />
     <property name="owl.dir" value="${data.dir}/owl" />
+    <property name="owl.file" value="${owl.dir}/irrigation.owl" />
     <property name="jena.lib.dir" value="lib/apache-jena-2.11.2/lib" />
 
     <property name="test.lib.dir" value="tests/lib" />
@@ -60,17 +61,9 @@
         </javac>
     </target>
 
-    <target name="runSchemaGen" description="Generate the ontologies">
-        <foreach target="schemaGen" param="owl.file">
-            <path>
-                <fileset dir="${owl.dir}/" includes="*owl"/>
-            </path>
-        </foreach>
-    </target>
-    
-    <target name="schemaGen" description="Run jena's schemagen for an owl file" >
+    <target name="runSchemaGen" description="Run jena's schemagen for an owl file" >
         <echo message="${owl.file}"/> 
-        <basename property="owl.file.name" file="${owl.file}" suffix=".owl"/>
+        <basename property="owl.file.name" file="irrigation.owl" suffix=".owl"/>
         <echo message="${owl.file.name}" />
         <java classname="jena.schemagen">
             <classpath>
@@ -81,7 +74,7 @@
             <arg value="-o" />
             <arg value="${src.dir}" />
             <arg value="-n" />
-            <arg value="${owl.file.name}" />
+            <arg value="Irrigation" />
             <arg value="--package" />
             <arg value="${gen.package.name}" />
             <arg value="--ontology" />
