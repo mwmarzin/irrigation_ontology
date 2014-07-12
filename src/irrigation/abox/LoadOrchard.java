@@ -9,9 +9,8 @@ package irrigation.abox;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.logging.Logger;
-
-import javax.sound.midi.Patch;
 
 import irrigation.generated.Irrigation;
 
@@ -47,18 +46,51 @@ public class LoadOrchard {
 		String destDir = file.getAbsolutePath().endsWith(File.separator) ? file
 				.getAbsolutePath() : file.getAbsolutePath() + File.separator;
 		logger.info(" destDir = " + destDir);
+		
+		
+		try
+		{
+		    makeOrachard(destDir, fileName);
+		}
 
-
+/*
 		try {
 			doFile(destDir, fileName);
-		} catch (Exception e) {
+		} 
+		*/
+		catch (Exception e) {
 			logger.severe("error processing file " + file.getName()
 					+ "absolute name " + file.getAbsolutePath());
 			e.printStackTrace();
 		}
 	}
 
-	/**
+	private static void makeOrachard(String destDir, String fileName) throws FileNotFoundException
+    {
+	    Model model = ModelFactory.createDefaultModel();
+        ArrayList <Patch> patches = new ArrayList<Patch>();
+	    PatchFactory pFactory = new PatchFactory(model);
+	    String[] patchTypes = {"blueberry patch", "strawberry patch", "tomato patch"};
+	    Patch p = null;
+	    
+	    p = pFactory.makeBlankPatch();
+	    p.setType("Foobars Patch");
+        patches.add(p);
+        
+        for(Patch iPatch : patches)
+        {
+            model.add(iPatch.getStatements());
+        }
+        
+        logger.fine("completed processing, outputting data");
+        File outFile = new File(destDir + "orchard" + ".nt");
+        PrintStream ps = new PrintStream(outFile);
+        logger.info("completed processing, writing out N-TRIPLE");
+        model.write(ps, "N-TRIPLE");
+        logger.info("process completed successfully");
+    }
+
+    /**
 	 * 	  
 	 * Strips data from the xml file and passes on for processing into a jena
 	 * model.
