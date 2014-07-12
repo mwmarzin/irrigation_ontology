@@ -1,8 +1,8 @@
-<project name="irrigation_ontology" default="abox-small" basedir=".">
+<project name="irrigation_ontology" default="abox-orchard" basedir=".">
     <taskdef resource="net/sf/antcontrib/antcontrib.properties">
-      <classpath>
-        <pathelement location="lib/ant-libs/ant-contrib-1.0b3.jar"/>
-      </classpath>
+        <classpath>
+            <pathelement location="lib/ant-libs/ant-contrib-1.0b3.jar"/>
+        </classpath>
     </taskdef>
     <!-- Configuration properties -->
     <!-- ======================== -->
@@ -27,7 +27,7 @@
 
     <property name="package.name" value="irrigation"/>
     <property name="gen.package.name" value="irrigation.generated"/>
-        
+
     <property name="dist.dir" value="dist" />
 
     <!-- Classpaths -->
@@ -41,15 +41,14 @@
         <fileset dir="${jena.lib.dir}" includes="**/*.jar" />
     </path>
 
-    <target name="abox-small" description="create Abox for User Preferences" depends="compileAbox">
-        <java classname="org.semantic.LoadSmall" output="${classes.dir}/abox.small.log">
+    <target name="abox-orchard" description="create Abox for User Preferences" depends="compileAbox">
+        <java classname="irrigation.abox.LoadOrchard" output="${classes.dir}/abox.orchard.log">
             <sysproperty key="java.util.logging.config.file" value="${logs.dir}/logging.properties" />
-
             <classpath>
                 <path refid="classpath.tools" />
             </classpath>
             <arg value="result" />
-            <arg value="small" />
+            <arg value="orchard" />
         </java>
     </target>
 
@@ -62,7 +61,7 @@
     </target>
 
     <target name="runSchemaGen" description="Run jena's schemagen for an owl file" >
-        <echo message="${owl.file}"/> 
+        <echo message="${owl.file}"/>
         <basename property="owl.file.name" file="irrigation.owl" suffix=".owl"/>
         <echo message="${owl.file.name}" />
         <java classname="jena.schemagen">
