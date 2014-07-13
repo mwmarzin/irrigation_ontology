@@ -13,13 +13,12 @@ public class Patch extends AbstractOntClass
     
     public static final String TYPE_KEY = "PATCH_TYPE"; 
     public static final String LOCATION_KEY = "LOCATION"; 
-    public static final String Y_COORD_KEY = "Y_COORD"; 
+    public static final String SOIL_KEY = "SOIL"; 
     
     
     protected String type = "";
     protected Location location = null;
-    protected ArrayList<Crop> crops = new ArrayList<Crop>();
-    protected ArrayList<Sensor> sensors = new ArrayList<Sensor>();
+    protected Soil soil = null;
     
     public Patch(Model model)
     {
@@ -44,19 +43,11 @@ public class Patch extends AbstractOntClass
         statements.put(LOCATION_KEY, model.createStatement(individual, Irrigation.hasLocation, location.getIndividual()));
     }
     
-    public static Individual createPatch(Model model, String name, String coordinateX, String coordinateY) {
-        
-        Individual patch = Irrigation.Patch.createIndividual(Irrigation.Patch.getURI() +
-                System.currentTimeMillis());
-        Statement s = null;
-        s = model.createStatement(patch, Irrigation.name, name);
-        model.add(s);
-        s = model.createStatement(patch, Irrigation.coordinateX, coordinateX);
-        model.add(s);
-        s = model.createStatement(patch, Irrigation.coordinateY, coordinateY);
-        model.add(s);
-        
-        return patch;
+    public void setSoil(Soil soil)
+    {
+        removeExistingStatement(SOIL_KEY);
+        this.soil = soil;
+        statements.put(SOIL_KEY, model.createStatement(individual, Irrigation.hasSoil, soil.getIndividual()));
     }
     
     @Override
@@ -64,16 +55,8 @@ public class Patch extends AbstractOntClass
     {
         ArrayList <Statement> statementsList = new ArrayList<Statement>(statements.values());
         statementsList.addAll(location.getStatements());
+        statementsList.addAll(soil.getStatements());
         
-        for(Crop crop:crops)
-        {
-            statementsList.addAll(crop.getStatements());
-        }
-        
-        for(Sensor sensor:sensors)
-        {
-            statementsList.addAll(sensor.getStatements());
-        }
         return statementsList;
     }
 

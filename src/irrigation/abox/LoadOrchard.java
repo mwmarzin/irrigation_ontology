@@ -70,16 +70,33 @@ public class LoadOrchard {
 	    Model model = ModelFactory.createDefaultModel();
         ArrayList <Patch> patches = new ArrayList<Patch>();
 	    PatchFactory pFactory = new PatchFactory(model);
-	    String[] patchTypes = {"blueberry patch", "strawberry patch", "tomato patch"};
 	    Patch p = null;
 	    
-	    p = pFactory.makeBlankPatch();
-	    p.setType("Foobars Patch");
+	    // create a farmer
+        Individual farmer = createIndividual(model, "Farmer John",
+                "610-286-0123", "farmerjohn@morgantownorchard.com",
+                "Morgantown Orchard");
+
+        // create a helper - should fail the rule is a Farmer
+        Individual helper = createIndividual(model, "Helper Jane",
+                "610-286-0123", "helperjane@morgantownorchard.com", 
+                "Morgantown Orchard");
+        
+	    
+	    p = pFactory.makePatch(SoilType.Clay, CropType.Apple);
+	    patches.add(p);
+	    p = pFactory.makePatch(SoilType.Peat, CropType.Blueberry);
+	    patches.add(p);
+	    p = pFactory.makePatch(SoilType.Clay, CropType.Corn);
+	    patches.add(p);
+	    p = pFactory.makePatch(SoilType.Peat, CropType.Strawberry);
+	    patches.add(p);
+	    p = pFactory.makePatch(SoilType.Peat, CropType.Tomato);
         patches.add(p);
         
-        for(Patch iPatch : patches)
+        for(Patch patch : patches)
         {
-            model.add(iPatch.getStatements());
+            model.add(patch.getStatements());
         }
         
         logger.fine("completed processing, outputting data");
@@ -123,17 +140,6 @@ public class LoadOrchard {
 	 * 
 	 */
 	public static void insertWithProvenance(Model model) {
-
-		// create a farmer
-		Individual farmer = createIndividual(model, "Farmer John",
-				"610-286-0123", "farmerjohn@morgantownorchard.com",
-				"Morgantown Orchard");
-
-		// create a helper - should fail the rule is a Farmer
-		Individual helper = createIndividual(model, "Helper Jane",
-				"610-286-0123", "helperjane@morgantownorchard.com", 
-				"Morgantown Orchard");
-		
 		// create a farm
 		String[] patchTypes = {"blueberry patch", "strawberry patch", "tomato patch"};
 		Individual farm = createFarm(model,"Morgantown Orchard", "Farmer John", "clay soil", patchTypes);

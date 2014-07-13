@@ -13,16 +13,19 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:Ontology="http://individual.utoronto.ca/hesham/Ontology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:unnamed="http://www.owl-ontologies.com/unnamed.owl#">
     <Ontology rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation">
         <rdfs:label xml:lang="en">Ontology for vCard</rdfs:label>
         <versionInfo xml:lang="en">Final</versionInfo>
-        <rdfs:comment xml:lang="en">Ontology for vCard based on RFC6350</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology is used to represent a Farm and it&apos;s irrigation system.
+
+Uses: vCard
+Ontology for vCard based on RFC6350</rdfs:comment>
     </Ontology>
     
 
@@ -95,8 +98,8 @@
     <!-- http://www.owl-ontologies.com/unnamed.owl#couldBeComposedOf -->
 
     <ObjectProperty rdf:about="&unnamed;couldBeComposedOf">
-        <rdfs:domain rdf:resource="&Ontology;InfrastructureProduct"/>
         <rdfs:range rdf:resource="&Ontology;InfrastructureProduct"/>
+        <rdfs:domain rdf:resource="&Ontology;InfrastructureProduct"/>
     </ObjectProperty>
     
 
@@ -256,8 +259,8 @@
     <!-- http://www.owl-ontologies.com/unnamed.owl#mustbecomposedof -->
 
     <ObjectProperty rdf:about="&unnamed;mustbecomposedof">
-        <rdfs:range rdf:resource="&Ontology;InfrastructureProduct"/>
         <rdfs:domain rdf:resource="&Ontology;InfrastructureProduct"/>
+        <rdfs:range rdf:resource="&Ontology;InfrastructureProduct"/>
     </ObjectProperty>
     
 
@@ -5096,6 +5099,12 @@ natural gas (e.g., dirt, dust, etc.)
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&unnamed;mustbecomposedof"/>
+                <someValuesFrom rdf:resource="&unnamed;WastewaterManhole"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&unnamed;mustbecomposedof"/>
                 <someValuesFrom rdf:resource="&unnamed;WastewaterFitting"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -5103,12 +5112,6 @@ natural gas (e.g., dirt, dust, etc.)
             <Restriction>
                 <onProperty rdf:resource="&unnamed;mustbecomposedof"/>
                 <someValuesFrom rdf:resource="&unnamed;WasteWaterPipe"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&unnamed;mustbecomposedof"/>
-                <someValuesFrom rdf:resource="&unnamed;WastewaterManhole"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">A pipe used to carry waste water from location to location (main line, service line, force main line, etc).</rdfs:comment>
