@@ -2,6 +2,7 @@ package irrigation.abox;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+//TODO refactor into AbstractOntClassFactory
 public class PatchFactory implements OntologyFactory
 {
     Model model = null;

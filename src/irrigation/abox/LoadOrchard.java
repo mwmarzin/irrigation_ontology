@@ -19,6 +19,7 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.reasoner.rulesys.BuiltinRegistry;
 
 /**
  * LoadAwardsData
@@ -68,7 +69,7 @@ public class LoadOrchard {
 	private static void makeOrachard(String destDir, String fileName) throws FileNotFoundException
     {
 	    Model model = ModelFactory.createDefaultModel();
-        ArrayList <Patch> patches = new ArrayList<Patch>();
+        ArrayList <AbstractOntClass> patches = new ArrayList<Patch>();
 	    PatchFactory pFactory = new PatchFactory(model);
 	    Patch p = null;
 	    
@@ -143,7 +144,7 @@ public class LoadOrchard {
 		// create a farm
 		String[] patchTypes = {"blueberry patch", "strawberry patch", "tomato patch"};
 		Individual farm = createFarm(model,"Morgantown Orchard", "Farmer John", "clay soil", patchTypes);
-		
+
 		// create a strawberry patch
 		Individual strawberryPatch = createPatch(model, "Strawberry Patch", "104534", "106543");
 		
