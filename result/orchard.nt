@@ -1,29 +1,42 @@
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405215105425> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215105425> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215105425> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#dailyGallonUsage> "5.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215105425> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#wiltingPoint> "7.2"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215105425> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#maxDryWeight> "1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405215086157> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215087385> .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972965> <http://www.w3.org/2006/vcard/ns#organization-name> "Morgantown Orchard" .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972965> <http://www.w3.org/2006/vcard/ns#email> "farmerjohn@morgantownorchard.com" .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972965> <http://www.w3.org/2006/vcard/ns#tel> "610-286-0123" .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972965> <http://www.w3.org/2006/vcard/ns#fn> "Farmer John" .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405215070297> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215083390> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215091583> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#dailyGallonUsage> "5.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215091583> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#wiltingPoint> "7.2"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215091583> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#maxDryWeight> "1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215083390> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215086156> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405214992570> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215004350> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215087385> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215091583> .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972966> <http://www.w3.org/2006/vcard/ns#organization-name> "Morgantown Orchard" .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972966> <http://www.w3.org/2006/vcard/ns#email> "helperjane@morgantownorchard.com" .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972966> <http://www.w3.org/2006/vcard/ns#tel> "610-286-0123" .
-<http://www.w3.org/2006/vcard/ns#VCard1405214972966> <http://www.w3.org/2006/vcard/ns#fn> "Helper Jane" .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405215091583> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215105425> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215004350> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#dailyGallonUsage> "5.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215004350> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#wiltingPoint> "7.2"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215004350> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#maxDryWeight> "1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215086156> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#dailyGallonUsage> "5.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215086156> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#wiltingPoint> "7.2"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215086156> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#maxDryWeight> "1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405214977781> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasSoil> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405214992570> .
-<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405215105425> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasCrop> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405215105425> .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#dailyGallonUsage> ".00005" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#maxDryWeight> "4.23288" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#rootDepth> "1.25" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#plantName> "Strawberry plant" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#coordinateY> "103423" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#coordinateX> "105344" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#name> "Blueberry Patch" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#coordinateY> "106543" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#coordinateX> "104534" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Patch1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#name> "Strawberry Patch" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#measuresPlantType> "Blueberry plant" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#measuresPlantType> "Strawberry plant" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#measures> "dielectric constant" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#currentValue> "80.4" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#sensorName> "Acclima Digital TDT RS500" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#availableWater> "1.96" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#allowableDepletion> "2.25" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#saturationLevel> "1.96" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#plantName> "Blueberry plant" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#availableWater> "1.26" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#allowableDepletion> "1.85" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#saturationLevel> "1.26" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#plantName> "Strawberry plant" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#dailyGallonUsage> ".00005" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#maxDryWeight> ".3525" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#rootDepth> "2.35" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop1405267657104> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#plantName> "Blueberry plant" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657102> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#owns> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657102> <http://www.w3.org/2006/vcard/ns#organization-name> "Morgantown Orchard" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657102> <http://www.w3.org/2006/vcard/ns#email> "farmerjohn@morgantownorchard.com" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657102> <http://www.w3.org/2006/vcard/ns#tel> "610-286-0123" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657102> <http://www.w3.org/2006/vcard/ns#fn> "Farmer John" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#patch> "tomato patch" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#patch> "strawberry patch" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#patch> "blueberry patch" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#soil> "clay soil" .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasOwner> <http://www.w3.org/2006/vcard/ns#VCard1405267657102> .
+<http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland1405267657103> <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#name> "Morgantown Orchard" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657103> <http://www.w3.org/2006/vcard/ns#organization-name> "Morgantown Orchard" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657103> <http://www.w3.org/2006/vcard/ns#email> "helperjane@morgantownorchard.com" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657103> <http://www.w3.org/2006/vcard/ns#tel> "610-286-0123" .
+<http://www.w3.org/2006/vcard/ns#VCard1405267657103> <http://www.w3.org/2006/vcard/ns#fn> "Helper Jane" .

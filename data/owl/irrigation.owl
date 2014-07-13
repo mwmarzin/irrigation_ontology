@@ -243,6 +243,7 @@ Ontology for vCard based on RFC6350</rdfs:comment>
 
     <ObjectProperty rdf:about="&unnamed;hasSoilType">
         <rdfs:range rdf:resource="&unnamed;SoilType_TCM"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Soil"/>
     </ObjectProperty>
     
 
@@ -457,6 +458,16 @@ Ontology for vCard based on RFC6350</rdfs:comment>
         <rdfs:label>measures plant type</rdfs:label>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Crop"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Sensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#owns -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#owns">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasOwner"/>
     </ObjectProperty>
     
 
@@ -1454,6 +1465,16 @@ Ontology for vCard based on RFC6350</rdfs:comment>
     <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#irrgationTypeName">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#isFarmer -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#isFarmer">
+        <rdfs:label>is farmer</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </DatatypeProperty>
     
 
@@ -5801,7 +5822,9 @@ http://www.w3.org/2005/Incubator/ssn/wiki/Agriculture_Meteorology_Sensor_Network
 
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer -->
 
-    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer"/>
+    <Class rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </Class>
     
 
 

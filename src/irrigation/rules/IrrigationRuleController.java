@@ -4,8 +4,17 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.*;
 import java.util.*;
+import java.util.logging.Logger;
+
+import org.apache.commons.collections.list.SetUniqueList;
+import org.apache.solr.common.SolrDocument;
+import org.apache.solr.common.SolrDocumentList;
+
+import JenaUtil.DomainPredicateRange;
+import JenaUtil.RulePOJO;
 
 import com.hp.hpl.jena.rdf.model.*;
+import com.hp.hpl.jena.reasoner.TriplePattern;
 import com.hp.hpl.jena.reasoner.rulesys.*;
 
 public class IrrigationRuleController
@@ -42,6 +51,41 @@ public class IrrigationRuleController
         
         inferenceModel.read(is, "N-TRIPLE");
         
+        //TODO Call rules
+        
         return inferenceModel;
+    }
+    
+    public static void addAboxBasedOnRulesAndTBox(InfModel infModel,Model m) 
+    {
+        GenericRuleReasoner reasoner = (GenericRuleReasoner) infModel
+                .getReasoner();
+        Map<String, Rule> ruleMap = new HashMap<String, Rule>();
+        
+        List<Rule> rules = reasoner.getRules();
+        for (int i = 0; i < rules.size(); i++) 
+        {
+            Rule rule = rules.get(i);
+            List<TriplePattern> triples = SetUniqueList
+                    .decorate(new ArrayList<TriplePattern>());
+            
+            ClauseEntry[] body = rule.getBody();
+            addClauses(body, triples);
+            for (int j = 0; j < triples.size(); j++) {
+                TriplePattern tp = triples.get(j);
+                Rule rule = new Rule();
+                rulePOJO.setTp(tp);
+                String predicate = tp.getPredicate().toString();
+            /*  RulePOJO rulePOJOPredicate = ruleMap.get(predicate);
+
+                if (rulePOJOPredicate != null) {
+                    rulePOJO.getParents().addAll(
+                            rulePOJOPredicate.getParents());
+                    rulePOJO.getChildren().addAll(
+                            rulePOJOPredicate.getChildren());
+                }*/
+                ruleMap.put(predicate, rulePOJO);
+            }
+        }
     }
 }

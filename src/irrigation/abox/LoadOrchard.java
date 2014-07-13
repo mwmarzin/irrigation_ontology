@@ -48,17 +48,16 @@ public class LoadOrchard {
 				.getAbsolutePath() : file.getAbsolutePath() + File.separator;
 		logger.info(" destDir = " + destDir);
 		
-		
+/*
 		try
 		{
 		    makeOrachard(destDir, fileName);
 		}
+*/
 
-/*
 		try {
 			doFile(destDir, fileName);
 		} 
-		*/
 		catch (Exception e) {
 			logger.severe("error processing file " + file.getName()
 					+ "absolute name " + file.getAbsolutePath());
@@ -69,7 +68,7 @@ public class LoadOrchard {
 	private static void makeOrachard(String destDir, String fileName) throws FileNotFoundException
     {
 	    Model model = ModelFactory.createDefaultModel();
-        ArrayList <AbstractOntClass> patches = new ArrayList<Patch>();
+        ArrayList <AbstractOntClass> patches = new ArrayList<AbstractOntClass>();
 	    PatchFactory pFactory = new PatchFactory(model);
 	    Patch p = null;
 	    
@@ -95,7 +94,7 @@ public class LoadOrchard {
 	    p = pFactory.makePatch(SoilType.Peat, CropType.Tomato);
         patches.add(p);
         
-        for(Patch patch : patches)
+        for(AbstractOntClass patch : patches)
         {
             model.add(patch.getStatements());
         }
@@ -143,7 +142,18 @@ public class LoadOrchard {
 	public static void insertWithProvenance(Model model) {
 		// create a farm
 		String[] patchTypes = {"blueberry patch", "strawberry patch", "tomato patch"};
-		Individual farm = createFarm(model,"Morgantown Orchard", "Farmer John", "clay soil", patchTypes);
+		
+	      // create a farmer
+        Individual farmer = createIndividual(model, "Farmer John",
+                "610-286-0123", "farmerjohn@morgantownorchard.com",
+                "Morgantown Orchard");
+
+        // create a helper - should fail the rule is a Farmer
+        Individual helper = createIndividual(model, "Helper Jane",
+                "610-286-0123", "helperjane@morgantownorchard.com", 
+                "Morgantown Orchard");
+		
+		Individual farm = createFarm(model,"Morgantown Orchard", farmer, "clay soil", patchTypes);
 
 		// create a strawberry patch
 		Individual strawberryPatch = createPatch(model, "Strawberry Patch", "104534", "106543");
@@ -196,6 +206,7 @@ public class LoadOrchard {
 		
 		Individual farmer = Irrigation.VCard.createIndividual(Irrigation.VCard.getURI()
 				+ System.currentTimeMillis());
+		
 		Statement s = null;
 		
 		s = model.createStatement(farmer, Irrigation.fn, name);
@@ -210,15 +221,18 @@ public class LoadOrchard {
 	}
 
 
-	public static Individual createFarm(Model model, String name, String owner,
+	public static Individual createFarm(Model model, String name, Individual owner,
 			String soilType, String[] patchTypes) {
 		
 		Individual farm = Irrigation.Farmland.createIndividual(Irrigation.Farmland.getURI()
 				+ System.currentTimeMillis());
 		Statement s = null;
+		s = model.createStatement(owner, Irrigation.owns, farm);
+		model.add(s);
+		
 		s = model.createStatement(farm, Irrigation.name, name);
 		model.add(s);
-		s = model.createStatement(farm, Irrigation.owner, owner);
+		s = model.createStatement(farm, Irrigation.hasOwner, owner);
 		model.add(s);
 		s = model.createStatement(farm, Irrigation.soil, soilType);
 		model.add(s);

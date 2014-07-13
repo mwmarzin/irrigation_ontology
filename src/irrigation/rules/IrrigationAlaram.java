@@ -13,8 +13,7 @@ public class IrrigationAlaram extends BaseBuiltin
     @Override
     public String getName()
     {
-        // TODO Auto-generated method stub
-        return null;
+        return "IrrigationAlarm";
     }
 
 }

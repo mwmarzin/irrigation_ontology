@@ -1,9 +1,4 @@
 <project name="irrigation_ontology" default="abox-orchard" basedir=".">
-    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
-        <classpath>
-            <pathelement location="lib/ant-libs/ant-contrib-1.0b3.jar"/>
-        </classpath>
-    </taskdef>
     <!-- Configuration properties -->
     <!-- ======================== -->
     <property environment="env" />
@@ -14,7 +9,6 @@
     <property name="gen.src.dir" value="src/irrigation/generated" />
     <property name="test.dir" value="tests" />
     <property name="data.dir" value="data" />
-    <property name="owl.dir" value="${data.dir}/owl" />
     <property name="classes.dir" value="classes" />
     <property name="logs.dir" value="logs" />
     <property name="owl.dir" value="${data.dir}/owl" />
@@ -51,6 +45,17 @@
             <arg value="orchard" />
         </java>
     </target>
+    
+    <target name="rules-orchard" description = "Feed abox to the rules" depends = "abox-orchard">
+        <java classname="irrigation.rules.IrrigationRuleController" output="${classes.dir}/rules.orchard.log">
+            <sysproperty key="java.util.logging.config.file" value="${logs.dir}/logging.properties" />
+            <classpath>
+                <path refid="classpath.tools" />
+            </classpath>
+            <arg value="result" />
+            <arg value="orchard" />
+        </java>
+     </target>
 
     <target name="compileAbox" description="compile Abox">
         <mkdir dir="result" />
