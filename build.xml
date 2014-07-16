@@ -46,8 +46,8 @@
         </java>
     </target>
     
-    <target name="rules-orchard" description = "Feed abox to the rules" depends = "abox-orchard">
-        <java classname="irrigation.rules.IrrigationRuleController" output="${classes.dir}/rules.orchard.log">
+    <target name="rules-orchard" description = "Feed abox to the rules" >
+        <java classname="irrigation.rules.ReasonWithRules" output="${classes.dir}/rules.orchard.log">
             <sysproperty key="java.util.logging.config.file" value="${logs.dir}/logging.properties" />
             <classpath>
                 <path refid="classpath.tools" />

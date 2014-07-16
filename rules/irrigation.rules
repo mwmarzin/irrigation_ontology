@@ -1,0 +1,15 @@
+@prefix irr: <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@include <RDFS>.
+
+#[DetermineFarmer: (?x irr:owns irr:Farmland1405462881087) -> print(?x, ' is a Farmer')]
+#[DetermineFarmer2: (?x irr:owns irr:Farmland1405462881087) -> (?x, irr:isFarmer 'true')]
+
+[DetermineFarmer: (?x irr:owns ?y), (?y irr:isAFarmland "true") -> (?x, irr:isFarmer 'true')]
+
+[NotifyFarmer: (?s irr:measures "waterLevel"), 
+               (?s irr:isIn ?o),
+               (?o irr:hasCrop ?c) -> 
+               SensorAlarm(?s irr:isAlarmedBy ?c)] 
+
+

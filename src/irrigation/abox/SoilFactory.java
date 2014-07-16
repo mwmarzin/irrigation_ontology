@@ -15,7 +15,7 @@ public class SoilFactory implements OntologyFactory
     public Soil createSoil(SoilType soilType, CropType cropType)
     {
         this.soil = new Soil(model);
-        
+        soil.setType(soilType);
         setCrop(cropType);
         
         return this.soil;

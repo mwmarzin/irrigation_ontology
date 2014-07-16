@@ -1,5 +1,7 @@
 package irrigation.abox;
 
+import java.util.UUID;
+
 import com.hp.hpl.jena.rdf.model.Model;
 
 import irrigation.generated.Irrigation;
@@ -11,29 +13,46 @@ public class Crop extends AbstractOntClass
     public static final String GALLONS_USED_KEY = "GALLONS_USED";
     public static final String DRY_WEIGHT_KEY = "DRY_WEIGHT";
     public static final String WILTING_PNT_KEY = "WILTING_PNT";
+    public static final String TYPE_KEY = "CROP_TYPE";
+    public static final String LOWER_KEY = "LOWER_THRESHOLD";
+    public static final String UPPER_KEY = "UPPER_THRESHOLD";
     
     private CropType cropType;
     private double rootDepth = 0;
     private double efficiency = 0;
+    private double lowerThreshold = 0;
+    private double upperThreshold = 0;
     
     public Crop(Model model, CropType cropType)
     {
         this.model = model;
-        this.individual = Irrigation.Crop.createIndividual(Irrigation.Crop.getURI() + System.currentTimeMillis());
+        this.individual = Irrigation.Crop.createIndividual(Irrigation.Crop.getURI() + UUID.randomUUID());
         this.cropType = cropType;
         
+        statements.put(TYPE_KEY,
+                model.createStatement(individual, 
+                        Irrigation.plantName, 
+                        cropType.toString()));
         statements.put(GALLONS_USED_KEY, 
                 model.createLiteralStatement(individual, 
                         Irrigation.dailyGallonUsage, 
-                        Double.toString(cropType.dailyGallonsUsed)));
+                        cropType.dailyGallonsUsed));
         statements.put(DRY_WEIGHT_KEY, 
                 model.createLiteralStatement(individual, 
                         Irrigation.maxDryWeight, 
-                        Double.toString(cropType.maxDryWeight)));
+                        cropType.maxDryWeight));
         statements.put(WILTING_PNT_KEY, 
                 model.createLiteralStatement(individual, 
                         Irrigation.wiltingPoint, 
-                        Double.toString(cropType.wiltingPoint)));
+                        cropType.wiltingPoint));
+        statements.put(LOWER_KEY, 
+                model.createLiteralStatement(individual, 
+                        Irrigation.lowerThreshold, 
+                        lowerThreshold));
+        statements.put(UPPER_KEY, 
+                model.createLiteralStatement(individual, 
+                        Irrigation.upperThreshold, 
+                        upperThreshold));
     }
     
     public CropType getCropType()

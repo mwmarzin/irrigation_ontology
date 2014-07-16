@@ -1,6 +1,0 @@
-@prefix ir: <http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-
-
-[DetermineFarmer: (?x ir.owns ?y) -> (?x ir:isFarmer true)]
-

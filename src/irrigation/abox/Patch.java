@@ -24,7 +24,7 @@ public class Patch extends AbstractOntClass
     {
         this.model = model;
         this.location = new Location(model);
-        this.individual = Irrigation.Patch.createIndividual(Irrigation.Patch.getURI() + System.currentTimeMillis());
+        this.individual = Irrigation.Patch.createIndividual(Irrigation.Patch.getURI() + UUID.randomUUID());
     }
     
     public void setType(String type)

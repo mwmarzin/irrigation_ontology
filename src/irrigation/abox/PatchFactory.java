@@ -8,6 +8,8 @@ public class PatchFactory implements OntologyFactory
     Model model = null;
     SoilFactory sFactory = null;
     Patch patch = null;
+    Crop crop = null;
+    
     public PatchFactory(Model model)
     {
         this.model = model;
@@ -18,7 +20,7 @@ public class PatchFactory implements OntologyFactory
     {
         this.patch = new Patch(model);
         
-        setSoil(soilType, cropType);
+        setPatchSoil(soilType, cropType);
         
         return this.patch;
     }
@@ -27,21 +29,22 @@ public class PatchFactory implements OntologyFactory
     {
         this.patch = new Patch(model);
         
-        setSoil(soilType, cropType);
-        setLocation(location);
+        setPatchSoil(soilType, cropType);
+        setPatchLocation(location);
         
         return this.patch;
     }
     
-    private void setLocation(Location location)
+    private void setPatchLocation(Location location)
     {
         patch.setLocation(location);
     }
     
-    private void setSoil(SoilType soilType, CropType cropType)
+    private void setPatchSoil(SoilType soilType, CropType cropType)
     {
         Soil soil = sFactory.createSoil(soilType,cropType);
         
         this.patch.setSoil(soil);
     }
+
 }

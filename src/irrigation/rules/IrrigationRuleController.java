@@ -6,13 +6,6 @@ import java.net.*;
 import java.util.*;
 import java.util.logging.Logger;
 
-import org.apache.commons.collections.list.SetUniqueList;
-import org.apache.solr.common.SolrDocument;
-import org.apache.solr.common.SolrDocumentList;
-
-import JenaUtil.DomainPredicateRange;
-import JenaUtil.RulePOJO;
-
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.reasoner.TriplePattern;
 import com.hp.hpl.jena.reasoner.rulesys.*;
@@ -30,7 +23,7 @@ public class IrrigationRuleController
 
     public static void registerRules()
     {
-        BuiltinRegistry.theRegistry.register(new IrrigationAlaram());
+        BuiltinRegistry.theRegistry.register(new SensorAlarm());
     }
     
     public static GenericRuleReasoner getRuleReasoner()
@@ -55,7 +48,7 @@ public class IrrigationRuleController
         
         return inferenceModel;
     }
-    
+    /*
     public static void addAboxBasedOnRulesAndTBox(InfModel infModel,Model m) 
     {
         GenericRuleReasoner reasoner = (GenericRuleReasoner) infModel
@@ -76,16 +69,10 @@ public class IrrigationRuleController
                 Rule rule = new Rule();
                 rulePOJO.setTp(tp);
                 String predicate = tp.getPredicate().toString();
-            /*  RulePOJO rulePOJOPredicate = ruleMap.get(predicate);
 
-                if (rulePOJOPredicate != null) {
-                    rulePOJO.getParents().addAll(
-                            rulePOJOPredicate.getParents());
-                    rulePOJO.getChildren().addAll(
-                            rulePOJOPredicate.getChildren());
-                }*/
                 ruleMap.put(predicate, rulePOJO);
             }
         }
     }
+    */
 }

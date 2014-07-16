@@ -20,11 +20,11 @@ public class Soil extends AbstractOntClass
     public Soil(Model model)
     {
         this.model = model;
-        individual = Irrigation.Soil.createIndividual(Irrigation.Soil.getURI() + System.currentTimeMillis());
+        individual = Irrigation.Soil.createIndividual(Irrigation.Soil.getURI() + UUID.randomUUID());
     }
     
     //TODO this could use more of the SoilType Enum
-    public void addType(SoilType soilType)
+    public void setType(SoilType soilType)
     {
         OntClass ontSoilType ;
         removeExistingStatement(TYPE_KEY);

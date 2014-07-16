@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.UUID;
 import java.util.logging.Logger;
 
 import irrigation.generated.Irrigation;
@@ -48,16 +49,17 @@ public class LoadOrchard {
 				.getAbsolutePath() : file.getAbsolutePath() + File.separator;
 		logger.info(" destDir = " + destDir);
 		
-/*
+
 		try
 		{
 		    makeOrachard(destDir, fileName);
 		}
-*/
 
+/*
 		try {
 			doFile(destDir, fileName);
 		} 
+*/
 		catch (Exception e) {
 			logger.severe("error processing file " + file.getName()
 					+ "absolute name " + file.getAbsolutePath());
@@ -205,7 +207,7 @@ public class LoadOrchard {
 			return null;
 		
 		Individual farmer = Irrigation.VCard.createIndividual(Irrigation.VCard.getURI()
-				+ System.currentTimeMillis());
+				+ UUID.randomUUID());
 		
 		Statement s = null;
 		
@@ -225,7 +227,7 @@ public class LoadOrchard {
 			String soilType, String[] patchTypes) {
 		
 		Individual farm = Irrigation.Farmland.createIndividual(Irrigation.Farmland.getURI()
-				+ System.currentTimeMillis());
+				+ UUID.randomUUID());
 		Statement s = null;
 		s = model.createStatement(owner, Irrigation.owns, farm);
 		model.add(s);
@@ -247,7 +249,7 @@ public class LoadOrchard {
 	public static Individual createPatch(Model model, String name, String coordinateX, String coordinateY) {
 		
 		Individual patch = Irrigation.Patch.createIndividual(Irrigation.Patch.getURI() +
-				System.currentTimeMillis());
+				UUID.randomUUID());
 		Statement s = null;
 		s = model.createStatement(patch, Irrigation.name, name);
 		model.add(s);
@@ -263,7 +265,7 @@ public class LoadOrchard {
 			String maxDryWeight, String dailyGallonUsage) {
 		
 		Individual plant = Irrigation.Crop.createIndividual(Irrigation.Crop.getURI() +
-				System.currentTimeMillis());
+				UUID.randomUUID());
 		Statement s = null;
 		s = model.createStatement(plant, Irrigation.plantName, plantName);
 		model.add(s);
@@ -281,7 +283,7 @@ public class LoadOrchard {
 			String plantType) {
 		
 		Individual sensor = Irrigation.Sensor.createIndividual(Irrigation.Sensor.getURI() +
-				System.currentTimeMillis());
+				UUID.randomUUID());
 		Statement s = null;
 		s = model.createStatement(sensor, Irrigation.sensorName, name);
 		model.add(s);
@@ -299,7 +301,7 @@ public class LoadOrchard {
 			String availableWater) {
 		
 		Individual soil = Irrigation.Soil.createIndividual(Irrigation.Soil.getURI() +
-				System.currentTimeMillis());
+				UUID.randomUUID());
 		Statement s = null;
 		s = model.createStatement(soil, Irrigation.plantName, plant);
 		model.add(s);
