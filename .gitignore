@@ -14,3 +14,4 @@ hs_err_pid*
 /classes
 /logs/out_*.log
 apache-jena-2.11.2
+.DS_Store
