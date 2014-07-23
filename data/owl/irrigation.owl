@@ -462,6 +462,17 @@ Ontology for vCard based on RFC6350</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#isIrrigatedBy -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#isIrrigatedBy">
+        <rdfs:label>is irrigated by</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#Farmland"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#IrrigationSystem"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#hasIrrigationSystem"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#measuresPlantType -->
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#measuresPlantType">
@@ -1467,6 +1478,16 @@ Ontology for vCard based on RFC6350</rdfs:comment>
 
     <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#depletionLevel">
         <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#emailAddress -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ece8486class/ontologies/2014/6/irrigation#emailAddress">
+        <rdfs:comment>email address</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
     </DatatypeProperty>
     
 
@@ -5161,7 +5182,7 @@ natural gas (e.g., dirt, dust, etc.)
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&unnamed;mustbecomposedof"/>
-                <someValuesFrom rdf:resource="&unnamed;WastewaterManhole"/>
+                <someValuesFrom rdf:resource="&unnamed;WasteWaterPipe"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5173,7 +5194,7 @@ natural gas (e.g., dirt, dust, etc.)
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&unnamed;mustbecomposedof"/>
-                <someValuesFrom rdf:resource="&unnamed;WasteWaterPipe"/>
+                <someValuesFrom rdf:resource="&unnamed;WastewaterManhole"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">A pipe used to carry waste water from location to location (main line, service line, force main line, etc).</rdfs:comment>

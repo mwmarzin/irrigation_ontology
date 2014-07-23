@@ -26,7 +26,7 @@ public class Crop extends AbstractOntClass
     public Crop(Model model, CropType cropType)
     {
         this.model = model;
-        this.individual = Irrigation.Crop.createIndividual(Irrigation.Crop.getURI() + UUID.randomUUID());
+        this.individual = super.createIndividual(Irrigation.Crop);
         this.cropType = cropType;
         
         statements.put(TYPE_KEY,

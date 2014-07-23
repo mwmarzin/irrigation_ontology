@@ -19,7 +19,7 @@ public class Sensor extends AbstractOntClass
     public Sensor(Model model)
     {
         this.model = model;
-        this.individual = Irrigation.Sensor.createIndividual(Irrigation.Sensor.getURI() + UUID.randomUUID());
+        this.individual = super.createIndividual(Irrigation.Sensor);
     }
     
     public void setSoil(Soil soil)

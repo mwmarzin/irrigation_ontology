@@ -20,7 +20,7 @@ public class Soil extends AbstractOntClass
     public Soil(Model model)
     {
         this.model = model;
-        individual = Irrigation.Soil.createIndividual(Irrigation.Soil.getURI() + UUID.randomUUID());
+        this.individual = super.createIndividual(Irrigation.Soil);
     }
     
     //TODO this could use more of the SoilType Enum
@@ -65,20 +65,22 @@ public class Soil extends AbstractOntClass
     {
         crops.add(crop);
     }
-
+    
     @Override
-    public List<Statement> getStatements()
+    public ArrayList<Statement> getStatements()
     {
-        ArrayList <Statement> statementsList = new ArrayList<Statement>(statements.values());
+        ArrayList <Statement> statementsList = super.getStatements();
         for(Crop crop:crops)
         {
             statementsList.add(model.createStatement(individual, Irrigation.hasCrop, crop.getIndividual()));
+            statementsList.add(model.createStatement(crop.getIndividual(), Irrigation.isIn, individual));
             statementsList.addAll(crop.getStatements());
         }
         
         for(Sensor sensor:sensors)
         {
             statementsList.add(model.createStatement(individual, Irrigation.hasSensor, sensor.getIndividual()));
+            statementsList.add(model.createStatement(sensor.getIndividual(), Irrigation.isIn, individual));
             statementsList.addAll(sensor.getStatements());
         }
         

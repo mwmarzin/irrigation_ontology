@@ -24,7 +24,7 @@ public class Patch extends AbstractOntClass
     {
         this.model = model;
         this.location = new Location(model);
-        this.individual = Irrigation.Patch.createIndividual(Irrigation.Patch.getURI() + UUID.randomUUID());
+        this.individual = super.createIndividual(Irrigation.Patch);
     }
     
     public void setType(String type)
@@ -32,7 +32,7 @@ public class Patch extends AbstractOntClass
         removeExistingStatement(TYPE_KEY);
         
         this.type = type;
-        statements.put(TYPE_KEY, model.createStatement(individual, Irrigation.name, type));
+        statements.put(TYPE_KEY, model.createLiteralStatement(individual, Irrigation.name, type));
     }
     
     public void setLocation(Location location)
@@ -51,9 +51,9 @@ public class Patch extends AbstractOntClass
     }
     
     @Override
-    public List<Statement> getStatements()
+    public ArrayList<Statement> getStatements()
     {
-        ArrayList <Statement> statementsList = new ArrayList<Statement>(statements.values());
+        ArrayList <Statement> statementsList = super.getStatements();
         statementsList.addAll(location.getStatements());
         statementsList.addAll(soil.getStatements());
         

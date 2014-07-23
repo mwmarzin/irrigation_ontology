@@ -15,6 +15,6 @@ public class Location extends AbstractOntClass
     public Location(Model model)
     {
         this.model = model;
-        this.individual = Irrigation.Location.createIndividual(Irrigation.Location.getURI() + UUID.randomUUID());
+        this.individual = super.createIndividual(Irrigation.Location);
     }
 }
